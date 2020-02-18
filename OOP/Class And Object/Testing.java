@@ -1,6 +1,8 @@
+//Here is java mini school project 
+//Admission Portal
 import java.util.Scanner;
 
-class SchoolManagement
+class SchoolManagement   //This is the POJO class in which all variables are private
    {
 	private String name;
 	private int rollNo;
@@ -8,7 +10,7 @@ class SchoolManagement
 	private int aYear;
 	private String aMonth;
 	
-	public void setName(String name)
+	public void setName(String name)   // Here I have created Getters & Setters of private variables of this class
 	{
 		this.name=name;
 	}
@@ -31,7 +33,7 @@ class SchoolManagement
 	
      
 	
-	 public String getName(){
+	 public String getName(){   //These are Getters
 	    return this.name;
 	 }
 	 public int getRollNo(){
@@ -50,10 +52,10 @@ class SchoolManagement
   }	 
   
   
-     class Management
+     class Management     //Here I have created another class in which I have created methods regarding to this mini project 
 	 {
 		 
-		Scanner s1 =new Scanner(System.in);
+		Scanner s1 =new Scanner(System.in);                 //This is Scanner class used to take input form user
 		SchoolManagement sm =new SchoolManagement();
 		String name;
 	    int rollNo;
@@ -62,7 +64,7 @@ class SchoolManagement
 	    String aMonth;
 		
 		
-		 void menu()
+		 void menu()      // This is a method which show the MENU on console
 		 {
 			 
 		System.out.println("1: Registeration ");
@@ -102,7 +104,8 @@ class SchoolManagement
 		} 
       
 		 
-		 void registeration(){
+		 void registeration()            // In this method I have set variables in Setters 
+		 {
 			
 			        System.out.print(" Enter Your Name  .....        ");
 		              name=s1.next();
@@ -128,7 +131,8 @@ class SchoolManagement
 		 }
 		 
 		 
-		        void View(){
+		        void View()       //This methd show that you are registered successfully or not
+			{
 					System.out.print("                               Enter your roll for identification  ");
 					
 				   int x;
@@ -136,40 +140,41 @@ class SchoolManagement
 				   if(x==rollNo){
 					   
 					 System.out.println("                  Your Name is .............. " +sm.getName());
-		             System.out.println("                  Roll number is ............ "+ sm.getRollNo());  
-		             System.out.println("                  Fees is   ................... "+sm.getFees());
+		                         System.out.println("                  Roll number is ............ "+ sm.getRollNo());  
+		                         System.out.println("                  Fees is   ................... "+sm.getFees());
 					 System.out.println("                  Admission Month is .... "+sm.getAMonth());
 					 System.out.println("                  Admission Year is  ..... "+sm.getAYear());
                    
 				   }
 				   
 				   else{
-				   System.out.println("                                   Your roll no is incorrect ");
+				          System.out.println("                                   Your roll no is incorrect ");
 				   }
 				   
 				   menu();
 				}
 				
 				
-				 void Update(){
+				 void Update()  //This method will update your old information which you have provided in Registeration
+				 {
 					 
 					 int x;
 				   x=s1.nextInt();
 				   if(x==rollNo){
-					 System.out.print(" Enter Your Name  .....        ");
-		            name=s1.next();
+				        System.out.print(" Enter Your Name  .....        ");
+		                        name=s1.next();
 					sm.setName(name);
-                    System.out.print(" Enter Roll number .....       ");
-                    rollNo=s1.nextInt();
+                                        System.out.print(" Enter Roll number .....       ");
+                                        rollNo=s1.nextInt();
 					sm.setRollNo(rollNo);
-                    System.out.print(" Enter Fees        .....       ");
-                    fees=s1.nextInt();
+                                        System.out.print(" Enter Fees        .....       ");
+                                        fees=s1.nextInt();
 					sm.setFees(fees);
-                    System.out.print(" Enter Admission Month .... ");
-                    aMonth=s1.next();
+                                        System.out.print(" Enter Admission Month .... ");
+                                        aMonth=s1.next();
 					sm.setAMonth(aMonth);
-                    System.out.print(" Enter Admission Year ....  ");
-                    aYear=s1.nextInt();
+                                        System.out.print(" Enter Admission Year ....  ");
+                                        aYear=s1.nextInt();
 					sm.setAYear(aYear);
 					System.out.println(" ");
 					System.out.println(" ");
@@ -178,14 +183,15 @@ class SchoolManagement
 		                }
 				   
 				   else{
-				   System.out.println("                                   Your roll no is incorrect ");
+				            System.out.println("                                   Your roll no is incorrect ");
 				   }
 				   
 				   menu();
 				   
 				 }
 				 
-			 void DeleteData(){
+			 void DeleteData() // This method will delete your earlier data
+			 {
 					 System.out.print("                               Enter your roll for identification  ");
 					
 				   int x;
@@ -198,16 +204,16 @@ class SchoolManagement
 					   sm.setAMonth(null);
 					   sm.setAYear(0);
 					   
-					 System.out.println("                  Your Name is .............. " +sm.getName());
-		             System.out.println("                  Roll number is ............ "+ sm.getRollNo());  
-		             System.out.println("                  Fees is   ................... "+sm.getFees());
-					 System.out.println("                  Admission Month is .... "+sm.getAMonth());
-					 System.out.println("                  Admission Year is  ..... "+sm.getAYear());
+					   System.out.println("                  Your Name is .............. " +sm.getName());
+		                           System.out.println("                  Roll number is ............ "+ sm.getRollNo());  
+		                           System.out.println("                  Fees is   ................... "+sm.getFees());
+					   System.out.println("                  Admission Month is .... "+sm.getAMonth());
+					   System.out.println("                  Admission Year is  ..... "+sm.getAYear());
                    
 				   }
 				   
 				   else{
-				   System.out.println("                                   Your roll no is incorrect ");
+				            System.out.println("                                   Your roll no is incorrect ");
 				   }
 				   
 				   menu();
@@ -222,11 +228,12 @@ class SchoolManagement
 	 }
 		         
 		 
-		 class Testing{
-			 public static void main (String args[]){
+		 class Testing  //This is the main class in which I have called the method class by creating its object
+		 {
+			        public static void main (String args[]){
 				 //Test t=new Test();
 				  System.out.println("             ((............. Welcome to Mehran Admission Portal .....))  ");
-				Management m=new Management();
+				Management m=new Management();// Here is the object of method class
 				
 				 m.menu();
 				 
