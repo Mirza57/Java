@@ -1,5 +1,5 @@
 interface  Company
-  {
+  {                           //This is all about interfaces
     void name();
     void salary();
   }
